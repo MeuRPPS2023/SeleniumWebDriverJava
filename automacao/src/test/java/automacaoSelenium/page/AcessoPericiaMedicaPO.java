@@ -1,8 +1,6 @@
 package automacaoSelenium.page;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

@@ -10,14 +10,12 @@ import org.junit.runners.MethodSorters;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.support.ui.Select;
 
-import automacaoSelenium.build.Cadastros;
 import automacaoSelenium.page.AcessoPericiaMedicaPO;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class AcessoPericiaMedicaTest extends BaseTest {
 
     public static AcessoPericiaMedicaPO dsl;
-    public Cadastros cadastros;
 
     public static final String URL_BASE = "https://proxima2.sisprevweb.com.br/estado_01/pericia/Login/Login.aspx";
 
