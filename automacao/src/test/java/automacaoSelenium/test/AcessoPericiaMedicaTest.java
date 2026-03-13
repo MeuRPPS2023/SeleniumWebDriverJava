@@ -188,9 +188,4 @@ public class AcessoPericiaMedicaTest extends BaseTest {
         assertEquals("Exclusão realizada com sucesso!", dsl.mensagemSucesso.getText());
         System.out.println("Cadastro de Grupo de Permissão Excluído Com Sucesso!");
     }
-
-    @Test
-    public void validar() {
-        System.err.println("Teste");
-    }
 }
