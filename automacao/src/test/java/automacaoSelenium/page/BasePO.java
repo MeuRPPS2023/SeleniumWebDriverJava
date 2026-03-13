@@ -3,6 +3,8 @@ package automacaoSelenium.page;
 import static org.junit.Assert.assertEquals;
 
 import java.time.Duration;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
@@ -87,6 +89,16 @@ public class BasePO {
     public void retornarTelaPrincial() {
         String janelaPrincipal = driver.getWindowHandle();
         driver.switchTo().window(janelaPrincipal);
+    }
+
+    public void linhaVisivelTela(WebElement elemento) {
+        boolean res;
+        try {
+            delay(elemento);
+            res = elemento.isDisplayed();
+        } catch (Exception e) {
+            res = false;
+        }
     }
 
 }
