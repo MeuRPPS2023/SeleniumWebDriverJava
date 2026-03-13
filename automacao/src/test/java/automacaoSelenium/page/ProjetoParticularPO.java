@@ -6,11 +6,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-
-public class AcessarSisprevWebPO extends BasePO {
+public class ProjetoParticularPO extends BasePO {
 
     @FindBy(id = "elementosForm:nome")
-    public  WebElement campoNome;
+    public WebElement campoNome;
 
     @FindBy(id = "elementosForm:sobrenome")
     public WebElement campoSobrenome;
@@ -60,7 +59,7 @@ public class AcessarSisprevWebPO extends BasePO {
     @FindBy(id = "buttonPopUpEasy")
     public WebElement buttonPopUpEasy;
 
-    @FindBy(tagName  = "textarea")
+    @FindBy(tagName = "textarea")
     public WebElement insetTextArea;
 
     @FindBy(id = "buttonPopUpHard")
@@ -84,20 +83,21 @@ public class AcessarSisprevWebPO extends BasePO {
     @FindBy(id = "resultado")
     public WebElement resultado;
 
-    public AcessarSisprevWebPO(WebDriver driver) {
+    public ProjetoParticularPO(WebDriver driver) {
         super(driver);
     }
 
     public void validarRadioButtonCheckbox(WebElement elemento) {
         if (elemento.isDisplayed() == true && elemento.isEnabled() == true) {
-            assertTrue("O elemento ("+ elemento.getAccessibleName() +") está visível!", elemento.isDisplayed());
-            assertTrue("O elemento ("+ elemento.getAccessibleName() +") está habilitado!", elemento.isEnabled());
+            assertTrue("O elemento (" + elemento.getAccessibleName() + ") está visível!", elemento.isDisplayed());
+            assertTrue("O elemento (" + elemento.getAccessibleName() + ") está habilitado!", elemento.isEnabled());
             elemento.click();
             assertTrue(elemento.isSelected());
             systemResult(elemento.getAccessibleName());
         } else {
-            System.out.println("Erro ao clicar no elemento >>>" + elemento.getAccessibleName() + "\nO elemento não está visível ou habilitado!");
+            System.out.println("Erro ao clicar no elemento >>>" + elemento.getAccessibleName()
+                    + "\nO elemento não está visível ou habilitado!");
         }
     }
-   
+
 }

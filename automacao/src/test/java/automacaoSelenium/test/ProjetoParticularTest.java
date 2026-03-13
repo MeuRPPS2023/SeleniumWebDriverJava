@@ -13,18 +13,18 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-import automacaoSelenium.page.AcessarSisprevWebPO;
+import automacaoSelenium.page.ProjetoParticularPO;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-public class AcessarSisprevWebTest extends BaseTest {
+public class ProjetoParticularTest extends BaseTest {
 
-    public static AcessarSisprevWebPO dsl;
+    public static ProjetoParticularPO dsl;
 
     public static final String URL_BASE = "C:/Automacao/WebSites/Componentes.html";
 
     @BeforeClass
     public static void inicializarPage() {
-        dsl = new AcessarSisprevWebPO(driver);
+        dsl = new ProjetoParticularPO(driver);
         driver.get(URL_BASE);
     }
 
